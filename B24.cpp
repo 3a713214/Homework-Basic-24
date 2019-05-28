@@ -3,30 +3,32 @@
 struct course
 {
 	char name[10];  
-	int calculus;
-	int computer;
-	int programming;
+	int Call;
+	int come;
+	int prog;
 } p;
 int main(void)
 {
+	int i;
     FILE *pFile;
-	printf("¨Ï¥Î°ßÅª¼Ò¦¡Åª¨úcouse.txt\n");
-	printf("Åª¨úªº¤º®e¬°¡G\n");
-	pFile=fopen("course.txt", "r");
+	printf("è®€å–å…§å®¹ç‚ºï¼š\n");
+	pFile=fopen("couse.txt", "r");
     if (pFile==NULL)
     {
-        printf("ÀÉ®×¶}±Ò¥¢±Ñ!!\n");
+
+        printf("æª”æ¡ˆé–‹å•Ÿå¤±æ•—!!\n");
         exit(1);
+
 	}   
     else
     {
-    	while (fscanf(pFile, "%[^,],%d,%d,%d", p.name, &p.calculus, &p.computer, &p.programming)!=EOF) 
-    	    printf("%s\t %d\t %d\t %d", p.name, p.calculus, p.computer, p.programming); 
+		for(i=0;i<7;i++){
+		fscanf(pFile,"%[^,],%d,%d,%d", p.name, &p.Call, &p.come, &p.prog);
+		printf("%s\t %d\t %d\t %d", p.name, p.Call, p.come, p.prog); 
+		}    
 	}
 	printf("\n");
     fclose(pFile);
     system("pause");
     return 0;
 }
-
-
