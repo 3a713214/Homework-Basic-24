@@ -11,12 +11,12 @@ int main(void)
 {
 	int i;
     FILE *pFile;
-	printf("è®€å–å…§å®¹ç‚ºï¼š\n");
+	printf("Åª¨ú¤º®e¬°¡G\n");
 	pFile=fopen("couse.txt", "r");
     if (pFile==NULL)
     {
 
-        printf("æª”æ¡ˆé–‹å•Ÿå¤±æ•—!!\n");
+        printf("ÀÉ®×¶}±Ò¥¢±Ñ!!\n");
         exit(1);
 
 	}   
@@ -32,3 +32,4 @@ int main(void)
     system("pause");
     return 0;
 }
+
